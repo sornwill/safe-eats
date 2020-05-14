@@ -3,69 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
-    <link rel="stylesheet" href=".css/style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="javascript/utility-script.js"></script>
+    <script src="javascript/city-geo-lookup-script.js"></script>
+    <script src="javascript/current-location-script.js"></script>
+    <script src="assets/script.js"></script>
+    <script src="javascript/covid-data-script.js"></script>
+
+
+    
+
     <title>Be Safe!</title>
 
 </head>
 <body>
-  <section class="hero is-primary">
+  <section class="hero is-primary container">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title">
-                      EAT SAFE!
-               <h2> Enjoy a meal with an Ease!!!!!</h2>       
+        <h1 class="title has-text-centered"> EAT SAFE!
+               <h2 h2 class="subtitle has-text-centered"> Enjoy a meal with an Ease!!!!!</h2>       
         </h1>
       </div>
     </div>
   </section>
-            
-    <div class="block">
+
+    <div class="block container">
         <form>
-          <div class="field">
-            <label class="label">Would you like to know more info about the nearest restaurant?</label>
+          <div class="field"><br>
+            <label class="label">Search for a Restaurant.</label>
 
             <div class="field has-addons">
               <div class="control">
-                <input class="input" type="text" placeholder="Enter the city name or state">
+                <input class="input" id="city-input" type="text" placeholder="Enter state">
               </div>
               <div class="control">
-                <a class="button is-info">
+                <a class="button is-info" id="search-btn">
                   Search
                 </a>
               </div>
             </div>
+
+            </div>
+            <div class="columns">
+            </div>
+
             <div class="columns">
             <div class="column is-one-third">
               <div class="column notification is-info">
                 Search Info
               </div>
+              <div></div>
             </div>
 
-            <div class="column is-one-third">
-              <div class="column notification is-success">
-               Covid-19 Information
+            <div class="column is-two-third">
+              <div class="column notification is-danger" id="covid-info">
+                <div>Restaurant Information:</div>
+                <div class="restaurantInfo" id="restuaurantInfo"></div>
+              </div>
+              <div>
               </div>
             </div>
-            <div class="column is-one-third">
-              <div class="column notification is-danger">
-               Restaurant Information
-              </div>
-            </div>
-
           </div>
-              
-            <footer class="footer">
-              ...
-            </footer>
-
-          <!-- <div class="footer"></div>
-    <footer id="main-footer">
-        <p>Be safe! & copy; 2020, All Rights Reserved</p>
-    </footer> -->
-    
-    <!-- jQuery JS -->
-  <script src="https://code.jquery.com/jquery.js"></script>
+        </div>         
 </body>
 </html>
