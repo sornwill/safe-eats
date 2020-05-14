@@ -2,31 +2,27 @@
 var latitude = 0;
 var longitude = 0;
 
-// getCurrentLocation();
-
-// function getCurrentLocation() {
-//   function onPositionReceived(position) {
-//     console.log(position);
-//     latitude = position.coords.latitude;
-//     longitude = position.coords.longitude;
-//     console.log("lat = " + latitude);
-//     console.log("lon = " + longitude);
-//   }
-
-//   function locationNotReceived(postionError) {
-//     console.log(postionError);
-//   }
-
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(
-//       onPositionReceived,
-//       locationNotReceived,
-//       { timeout: 3 }
-//     );
-//   }
-// }
-
 navigator.geolocation.getCurrentPosition((position) => {
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
+  // console.log(position.coords.latitude);
+  // console.log(position.coords.longitude);
 });
+
+// IP Geo Location API
+// geoLocation();
+function geoLocation() {
+  var settings = {
+    async: true,
+    crossDomain: true,
+    url: "https://ip-geo-location.p.rapidapi.com/ip/23.123.12.11?format=json",
+    method: "GET",
+    headers: {
+      "x-rapidapi-host": "ip-geo-location.p.rapidapi.com",
+      "x-rapidapi-key": "4f9b629588mshaf3f53eee01ba60p166742jsn4b237a2eb674",
+    },
+  };
+
+  $.ajax(settings).done(function (response) {
+    console.log("ip-geo locations");
+    console.log(response);
+  });
+}

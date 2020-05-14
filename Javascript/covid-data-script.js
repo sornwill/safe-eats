@@ -2,19 +2,28 @@
 // Note - paid subscription
 // https://rapidapi.com/ShubhGupta/api/covid19-data?endpoint=apiendpoint_d5275d2a-ffe4-4a12-8a76-6c9d932e234d
 
-// Capitalizes first letter of each word.
-// var titleCase = titleCase("new york");
-// console.log("tiltel case = " + titleCase);
-
-// Get the state index number that corresponds to the API request.
-
+var storeCity = "";
 var covidAPIExit = localStorage.getItem("coronaAPIResponse");
 
+// The covid19-data API object is stored and retrieve locally and
+// onnly updated once a day with fresh data to save on cost
+// and to speed up retrieval times.
 if (accessedToday() === false || covidAPIExit === null) {
   getCovidStats("minnesota");
 } else {
   getCoronaObjectLocalStore();
 }
+
+$(document).ready(function () {
+  $(document).ready(function () {
+    $("#search-btn").on("click", function () {
+      var searchCity = $("#city-input").val().trim();
+      $("#city-input").val("");
+      storeCity = searchCity;
+      getCovidStats(storeCity);
+    });
+  });
+});
 
 function getCovidStats(state) {
   var titleCase01 = titleCase(state);
@@ -50,13 +59,16 @@ function getCovidStats(state) {
       latitude = response.features[stateIdexNum].properties.latitude;
       longitude = response.features[stateIdexNum].properties.longitude;
       state = response.features[stateIdexNum].properties.name;
-      console.log("Confirmed cases = " + confirmed);
-      console.log("Confirmed deaths = " + deaths);
-      console.log(geo_id);
-      console.log(latitude);
-      console.log(longitude);
-      console.log(state);
-      console.log(response);
+
+      $("#restuaurantInfo").empty();
+      $("#restuaurantInfo").append(
+        titleCase(storeCity) +
+          "  - Covid-19 Statistics: &nbsp; Cases = " +
+          confirmed +
+          "  &nbsp; Deaths = " +
+          deaths
+      );
+
       setLocalStore();
 
       // function setLocalStore() saves the corona API response to local storage
@@ -73,20 +85,13 @@ function getCovidStats(state) {
 function getCoronaObjectLocalStore() {
   var covidAPIRetrieval = localStorage.getItem("coronaAPIResponse");
   var covidAPIRetrieved = JSON.parse(covidAPIRetrieval);
-  console.log(covidAPIRetrieved);
-  // var state = covidAPIRetrieved.features[1].properties.name;
-  // console.log("state = " + state);
-
   for (i = 0; i < 52; i++) {
     state = covidAPIRetrieved.features[i].properties.name;
-    console.log("for loop state = " + state);
   }
-
-  //return covidAPIRetrieval;
 }
 
 // Test of accessedToday
-console.log("Inital access today call = " + accessedToday());
+// console.log("Inital access today call = " + accessedToday());
 
 // fucntion is used to see if an API request has been made today.
 function accessedToday() {
@@ -104,6 +109,5 @@ function accessedToday() {
       accessedToday = false;
     }
   }
-
   return accessedToday;
 }
