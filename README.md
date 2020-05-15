@@ -1,6 +1,42 @@
-# Safe-Eats- A platform to check your favorite restaurant and know more information about COVID19. 
+# Project Name
 
-###### Safe-eats displays covid19 information for restaurants in your area. We have created a platform that is easier to view how many cases the restaurant area has and it is very easier for visitors to stay away from a high confirmed neighborhoods. You have access to the phone number, address, and the menu of the restaurants. 
+> Safe Eats - feature not implemented in Eat Safe Site.
 
-###### The technologies that we have used are HTML, CSS, JAVASCRIPT, jQUERY, ZOMATO API, COVID19-DATA from RapidAPI. 
+## Table of contents
 
+- [General info](#general-info)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#features)
+- [Status](#status)
+
+## General info
+
+- Safe Eats - written by John Leintz, William Sorn, and Ahmed Bule.
+
+## Screenshots
+
+![](/assets/img/safeEats.GIF)
+
+## Technologies
+
+- Site uses HTML, CSS, Bootstrap, Javascript and Jquery. and COVID19-DATA API from Rapid API.
+
+- Site also uses the [covide19-data API](https://rapidapi.com/ShubhGupta/api/covid19-data?endpoint=apiendpoint_d5275d2a-ffe4-4a12-8a76-6c9d932e234d) to retrieve covid19 cases and death in the United States by state.
+
+## Setup
+
+- The code is self-contained, no setup is necessary.
+
+## Features
+
+- This Dashboard allows a user to search for states in the US and display the current covid19 statistics. This site is an unimplemented feature that was intended for a website named Eat Safe. This feature was not implemented due to a request by a team member's companies.
+
+## To-do list:
+
+- None
+
+## Status
+
+- The project is a demo page, no further development is planned.
