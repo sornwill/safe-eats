@@ -1,5 +1,6 @@
-# eatsafe
-Displays covid 19 info. Information of restaurants in your area. You have access to a phone number to make sure they are still open for business, with options of doing pickups.
+# Safe-Eats- A platform to check your favorite restaurant and know more information about COVID19. 
 
+###### Safe-eats displays covid19 information for restaurants in your area. We have created a platform that is easier to view how many cases the restaurant area has and it is very easier for visitors to stay away from a high confirmed neighborhoods. You have access to the phone number, address, and the menu of the restaurants. 
 
-WS: THIS IS A TEST.
+###### The technologies that we have used are HTML, CSS, JAVASCRIPT, jQUERY, ZOMATO API, COVID19-DATA from RapidAPI. 
+
