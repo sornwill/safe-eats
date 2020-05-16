@@ -17,7 +17,7 @@
 
 ## Screenshots
 
-![](/assets/img/safeEats.GIF)
+![](/Assets/Img/safeEats.GIF)
 
 ## Technologies
 
