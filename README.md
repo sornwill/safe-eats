@@ -13,7 +13,7 @@
 
 ## General info
 
-- Safe Eats - written by John Leintz, William Sorn, and Ahmed Bule.
+- Safe Eats - Safe Eats - This is a feature that was not implemented for the site Eat Safe. The feature allows the user to see what the Covid19 statistics are for the searched state.
 
 ## Screenshots
 
@@ -40,3 +40,13 @@
 ## Status
 
 - The project is a demo page, no further development is planned.
+
+## Contributors
+
+- Ahmed Bule
+- John Leintz
+- William Sorn
+
+## Link
+
+[Safe Eats](https://sornwill.github.io/safe-eats/)
